@@ -1,6 +1,5 @@
 package net.ienlab.changelog
 
-import android.R.attr.name
 import android.content.ContentResolver
 import android.content.ContentValues
 import android.content.Context
@@ -105,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 
             val resolver: ContentResolver = contentResolver
             val contentValues = ContentValues()
-            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, name)
+            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, "name")
             contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/png")
             contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/CHANGELOG")
             val imageUri = resolver.insert(
